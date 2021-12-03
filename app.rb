@@ -10,5 +10,12 @@ class BirthdayApp < Sinatra::Base
     erb :index
   end
 
+  post '/happy_bday' do
+    @first_name = params[:first_name]
+    # @day = params[:day]
+    # @month = params[:month]
+    erb :happy_bday
+  end
+
   run! if app_file == $0
 end

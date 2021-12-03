@@ -8,11 +8,66 @@
     <title>Birthday App</title>
     <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+      body {
+        text-align: center;
+        color: #003399;
+      }
+      div {
+        background-color: #33ccff;
+        padding-bottom: 20px;
+        border: 1px dashed;
+        max-width: 400px;
+      }
+      h1 {
+        font-family: 'Dancing Script', cursive;
+        font-size: 50px
+      }
+      #button-go {
+        cursor: pointer;
+        display: block;
+        width: 150px;
+        height: 30px;
+        background-color: #e6f7ff;
+        margin: 15px auto 0;
+        border-radius: 5px;
+        color: #003399;
+        font-weight: bold;
+      }
     </style>
   </head>
 
 <body>
-  <h1>Happy Birthday Riky!</h1>
+<div>
+
+<h1>Hello there!</h1>
+
+<section>
+  <h3>What's your name?</h3>
+    <form action='/happy_bday' method='post'>
+      <input type='text' name='first_name'>
+  <h3>When's your birthday?</h3>
+      day: <input type='text' name='day'>
+      month: <select type='dropdown' name='month'>
+                <option value='January'>January</option>
+                <option value='February'>February</option>
+                <option value='March'>March</option>
+                <option value='April'>April</option>
+                <option value='May'>May</option>
+                <option value='June'>June</option>
+                <option value='July'>July</option>
+                <option value='August'>August</option>
+                <option value='September'>September</option>
+                <option value='October'>October</option>
+                <option value='November'>November</option>
+                <option value='December'>December</option>
+             </select>
+      <br>
+      <button type='submit' id='button-go'>Go!</button>
+    </form>
+  </section>
+
+</div>
 </body>
 
 </html>
