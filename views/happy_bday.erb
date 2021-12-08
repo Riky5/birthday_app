@@ -7,15 +7,18 @@
   </head>
 
 <body>
-<%# <%= if request.path_info == "/happy_bday" %> %>
-  <div>
-    <h1>🥳 Happy Birthday <%= @first_name %>! 🎉🎁🎂</h1>
+
+<% if @days_left == 0 %>
+  <div class='container'>
+    <h1>🎂 Happy Birthday 🥳
+    <br>
+    🎉 <%= $first_name %>! 🎁</h1>
   </div>
-<%# <%= else %> %>
-  <div>
-    <h1>Your birthday will be in <%= @days_left %> days, <%= @first_name %>!</h1>
+<% else %>
+  <div class='container'>
+    <h1>Your birthday will be in <%= @days_left %> days, <%= $first_name %>!</h1>
   </div>
-<%# <%= end %> %>
+<% end %>
 
 </body>
 
