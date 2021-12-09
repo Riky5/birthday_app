@@ -7,8 +7,10 @@ class BirthdayApp < Sinatra::Base
     register Sinatra::Reloader
   end
 
+  enable :sessions
+
   before do
-    @birthday = Birthday.new
+    @birthday = Birthday.instance
   end
 
   get '/' do
@@ -16,16 +18,16 @@ class BirthdayApp < Sinatra::Base
   end
 
   post '/details' do
-    $first_name = params[:first_name]
-    $day = params[:day].to_i
-    $month = params[:month]
-    redirect '/happy_bday'
+    session[:first_name] = params[:first_name]
+    session[:day] = params[:day].to_i
+    session[:month] = params[:month]
+    redirect '/bday_message'
   end
 
-  get '/happy_bday' do
-    @day = $day
-    @month = @birthday.month_to_int($month)
-    @days_left = @birthday.days_left(@day, @month)
+  get '/bday_message' do
+    @first_name = session[:first_name]
+    @month = @birthday.month_to_int(session[:month])
+    @days_left = @birthday.days_left(session[:day], @month)
     erb :happy_bday
   end
 
