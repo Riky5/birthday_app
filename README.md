@@ -15,7 +15,7 @@ I'd like to input my name. birth day and month._
 
 1. Clone the repo
 ```
-    git clone 
+    git clone https://github.com/Riky5/birthday_app.git
 ```
 2. Install all the gems
 ```
@@ -39,7 +39,7 @@ I'd like to input my name. birth day and month._
 
 In the Homepage you can enter your name, birth day and birth month.
 
-Homepage 1
+Example 1
 
 A user's birth date is in the future.
 ![Homepage1](/images/homepage1.png)
@@ -50,10 +50,13 @@ The user receives this message:
 ![Days left to birthday](/images/days_left_to_bday.png)
 
 ---
-Homepage 2
+Example 2
 
 A user's birth date is today = 9 December 2021
 ![Homepage2](/images/homepage2.png)
 
 The user receives this message instead:
 ![Happy Birthday message](/images/happy_birthday_message.png)
+
+---
+Give it a try with your birthday ☺️
